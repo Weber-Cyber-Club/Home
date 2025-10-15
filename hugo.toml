@@ -90,7 +90,7 @@ pagination.pagerSize = 5
 
     [languages.en.params.logo]
       logoText = "Weber Cyber Club"
-      logoHomeLink = "/"
+      logoHomeLink = "/Home/"
 
     [languages.en.menu]
       # Submenus is available since v2.1.0
