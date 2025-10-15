@@ -102,6 +102,14 @@ pagination.pagerSize = 5
       #   identifier = "anItem"
       #   name = "AnItem"
       [[languages.en.menu.main]]
+        identifier = "announcements"
+        name = "Announcements"
+        url = "/announcements"
+      [[languages.en.menu.main]]
+        identifier = "club-info"
+        name = "Club Information"
+        url = "/club-info"
+      [[languages.en.menu.main]]
         identifier = "labs"
         name = "Lab Walkthroughs"
         url = "/labs"
