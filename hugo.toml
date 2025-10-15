@@ -121,6 +121,10 @@ pagination.pagerSize = 5
         identifier = "showcase"
         name = "Our Work"
         url = "/showcase"
+      [[languages.en.menu.main]]
+        identifier = "categories"
+        name = "Categories"
+        url = "/categories"
 
 [module]
   # In case you would like to make changes to the theme and keep it locally in you repository,

@@ -23,13 +23,20 @@
     <loc>//localhost:1313/challenges/placeholder/</loc>
     <lastmod>2025-10-14T19:06:39-06:00</lastmod>
   </url><url>
+    <loc>//localhost:1313/categories/</loc>
+    <lastmod>2025-10-14T19:06:30-06:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/labs/</loc>
+    <lastmod>2025-10-14T19:06:30-06:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/nta/</loc>
+    <lastmod>2025-10-14T19:06:30-06:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/passwords/</loc>
     <lastmod>2025-10-14T19:06:30-06:00</lastmod>
   </url><url>
     <loc>//localhost:1313/labs/placeholder/</loc>
     <lastmod>2025-10-14T19:06:30-06:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/categories/</loc>
   </url><url>
     <loc>//localhost:1313/club-info/club-information/</loc>
   </url><url>

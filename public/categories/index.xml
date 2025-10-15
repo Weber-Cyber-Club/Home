@@ -5,6 +5,27 @@
     <link>//localhost:1313/categories/</link>
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Tue, 14 Oct 2025 19:06:30 -0600</lastBuildDate><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NTA</title>
+      <link>//localhost:1313/categories/nta/</link>
+      <pubDate>Tue, 14 Oct 2025 19:06:30 -0600</pubDate>
+      
+      <guid>//localhost:1313/categories/nta/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Passwords</title>
+      <link>//localhost:1313/categories/passwords/</link>
+      <pubDate>Tue, 14 Oct 2025 19:06:30 -0600</pubDate>
+      
+      <guid>//localhost:1313/categories/passwords/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
   </channel>
 </rss>
