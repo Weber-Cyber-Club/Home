@@ -103,7 +103,7 @@ pagination.pagerSize = 5
       #   name = "AnItem"
       [[languages.en.menu.main]]
         identifier = "labs"
-        name = "Lab-Walkthroughs"
+        name = "Lab Walkthroughs"
         url = "/labs"
       [[languages.en.menu.main]]
         identifier = "challenges"
