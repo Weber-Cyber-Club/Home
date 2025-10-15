@@ -42,7 +42,11 @@
   </url><url>
     <loc>//localhost:1313/club-info/</loc>
   </url><url>
+    <loc>//localhost:1313/extradocs/</loc>
+  </url><url>
     <loc>//localhost:1313/main/</loc>
+  </url><url>
+    <loc>//localhost:1313/extradocs/profcom-protocol-specification/</loc>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
   </url><url>
