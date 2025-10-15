@@ -9,6 +9,7 @@
   --trigger-color: #f3f0f4;
 
   // Use in code syntax highlighting
+  --code-color: #d3c2df
   --syntax-func-color: color-mix(in srgb, var(--accent) 70%, #999 30%);
   --syntax-var-color: color-mix(in srgb, var(--accent) 90%, transparent);
   --syntax-punctuation-color: white;
