@@ -11,12 +11,6 @@
     <loc>//localhost:1313/announcements/example-announcement/</loc>
     <lastmod>2025-10-14T21:15:53-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/club-info/club-information/</loc>
-    <lastmod>2025-10-14T21:09:03-06:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/club-info/</loc>
-    <lastmod>2025-10-14T21:09:03-06:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/showcase/placeholder/</loc>
     <lastmod>2025-10-14T19:06:44-06:00</lastmod>
   </url><url>
@@ -36,6 +30,10 @@
     <lastmod>2025-10-14T19:06:30-06:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/</loc>
+  </url><url>
+    <loc>//localhost:1313/club-info/club-information/</loc>
+  </url><url>
+    <loc>//localhost:1313/club-info/</loc>
   </url><url>
     <loc>//localhost:1313/main/</loc>
   </url><url>
