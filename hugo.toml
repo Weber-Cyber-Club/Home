@@ -115,7 +115,7 @@ pagination.pagerSize = 5
         url = "/labs"
       [[languages.en.menu.main]]
         identifier = "challenges"
-        name = "Challenge Walkthroughs"
+        name = "Challenges"
         url = "/challenges"
       [[languages.en.menu.main]]
         identifier = "showcase"
