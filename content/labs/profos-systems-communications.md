@@ -2,7 +2,7 @@
 title = "Profos-Systems Communications Lab"
 date = "2025-10-14T19:06:30-06:00"
 author = ""
-cover = "/Home/public/assets/profcom/ProfosBanner.png"
+cover = "/Home/assets/profcom/ProfosBanner.png"
 description = ""
 categories = ["NTA", "Passwords"]
 showFullContent = false
@@ -102,7 +102,7 @@ One last thing we should keep in mind before looking at our packet capture is wh
 
 **Obtaining the PCAP**
 
-We are going to be doing analysis of the [Profcom.pcap](/Home/asssets/profcom/Profcom.pcap) file which should be in the /Some/Directory/Club-Challenges/Labs/Profcom/ directory as long as you have cloned this repository to your computer. If you have not, you can also download the file here [Profcom.pcap](/Home/asssets/profcom/Profcom.pcap).
+We are going to be doing analysis of the [Profcom.pcap](/Home/assets/profcom/Profcom.pcap) file which should be in the /Some/Directory/Club-Challenges/Labs/Profcom/ directory as long as you have cloned this repository to your computer. If you have not, you can also download the file here [Profcom.pcap](/Home/assets/profcom/Profcom.pcap).
 
 **Opening the File**
 
@@ -118,13 +118,13 @@ If you are installing wireshark on another distribution that is not debian based
 
 Let's open Wireshark:
 
-![Wireshark Homepage](/Home/asssets/profcom/wiresharkhome.png)
+![Wireshark Homepage](/Home/assets/profcom/wiresharkhome.png)
 
 We are going to go to File > Open, and navigate to where your Profcom.pcap file has been stored.
 
 This is what we should see when we first open our file it can seem like a lot to analyze, but we are going to narrow it down a bit to make it easier.
 
-![Profcom Initial Open](/Home/asssets/profcom/profcominitial.png)
+![Profcom Initial Open](/Home/assets/profcom/profcominitial.png)
 
 **Let's add our first filter:** According to our protocol specification, we are dealing with a TCP based protocol operating on port 8080. Now, in some situations, we might end up with HTTP traffic mixed in with the traffic we are looking for. This is because sometimes people will use 8080 for a web server. We will not need to contend with this issue in our situation. The syntax of this filter will be:
 
@@ -132,15 +132,15 @@ This is what we should see when we first open our file it can seem like a lot to
 
 After applying this filter, we are seeing a big change in the amount of traffic we have to deal with. If we look in the bottom right of the screen, we can see the answer to our first question, we see the total packets in the file listed as 2338, while we are currently displaying 78 packets. This is because we have filtered to only see traffic running on port 8080, as stated previously this would be all our ProfCom packets.
 
-![Packets Displayed](/Home/asssets/profcom/packetsdisplayed.png)
+![Packets Displayed](/Home/assets/profcom/packetsdisplayed.png)
 
 To make this analysis as easy as possible for us, we are going to break this analysis up into the individual TCP streams (a conversation over TCP). Doing this in Wireshark, we will see all of our data from a given stream all in one window. To do this we will click the first packet–in the top bar we will go to Analyze > Follow > TCP Stream. The result of this operation should give you the following window:
 
-![TCP Steam 1](/Home/asssets/profcom/stream1.png)
+![TCP Steam 1](/Home/assets/profcom/stream1.png)
 
 One last thing we want to do before analyzing this file is change which format is being displayed. Right now, Wireshark is showing us an ASCII representation, which is great, when all of our data is human readable. However, in this case, it is not! We are going to change from ASCII to RAW. In order to do this, we will go to the "Show As" list, and change from ASCII to RAW. This will show all of our data as raw hexadecimal bytes.
 
-![RAW Format](/Home/asssets/profcom/rawformat.png)
+![RAW Format](/Home/assets/profcom/rawformat.png)
 
 **Analyzing RAW Packets**
 
@@ -176,13 +176,13 @@ We know we have currently read up to offset 4, because we went from offset 0 and
 
 Now that we know the segment of data we are dealing with, we can convert this hexadecimal to readable text. We are dealing with characters, so we do not need to worry about endianness. We are just converting each byte to its corresponding ASCII character. One of the easiest ways to do this is using [cyberchef.org](https://cyberchef.org/). If you follow the previous link, you will be brought to their page. We are going to look for a way to convert from hexadecimal to ASCII. By default, all the conversions from functions just convert whatever the input data type is to human-readable ASCII form, so in the search bar, let's lookup hex.
 
-![hex](/Home/asssets/profcom/hex.png)
+![hex](/Home/assets/profcom/hex.png)
 
 Double click "From Hex" and it should be added to your recipe.
 
 Now that we have a recipe created, we can add our hexadecimal text into the input box, and we should be given an output that is clear, human-readable text.
 
-![Ouput 1](/Home/asssets/profcom/output1.png)
+![Ouput 1](/Home/assets/profcom/output1.png)
 
 We see, based on this conversion, our first username that was sent is **RickyBobby**.
 
@@ -197,7 +197,7 @@ We see this is hexadecimal number 16. Now, remember, this is hexadecimal not dec
 
 Plugging this into the previously used "From Hex" function, we are going to see something strange–our data seems to have been corrupted!
 
-![Corruption](/Home/asssets/profcom/corrupted.png)
+![Corruption](/Home/assets/profcom/corrupted.png)
 
 We need to remember the protocol specification references an XOR key that was used to "encrypt the data". If you would like to learn more about XORs, [here](https://en.wikipedia.org/wiki/XOR_gate) is a link to read more about them. I will not cover them in this lab, as this is more of a lab on protocols not ciphering. The XOR that was given to us is the key 0x45, which means the binary we are doing an XOR operation over is 0100 0101. The decryption process would look like this:
 
@@ -229,7 +229,7 @@ This is a very tough operation to do by hand for 22 different bytes, so thankful
 
 We are going to create a recipe to undo this XOR cipher. We already have something like a pseudocode representation above. Thankfully, a lot of these conversions are unneeded in Cyberchef. We are only going to need to go "From Hex" and do an "XOR" operation using hex key value 45.
 
-![xorrecipe](/Home/asssets/profcom/xor.png)
+![xorrecipe](/Home/assets/profcom/xor.png)
 
 Now that we have our recipe built, we can plug in our entire password from the PCAP, and we should get our plaintext password.
 
@@ -260,7 +260,7 @@ We see that the server responds with 00 at the end of this authentication, and t
 
 In the bottom right corner, we will click the up arrow next to the stream number, and go to TCP stream number 2:
 
-![TCP Stream 2](/Home/asssets/profcom/stream2.png)
+![TCP Stream 2](/Home/assets/profcom/stream2.png)
 
 Looking at Stream 2 we already have a very promising sign–we can see the server has responded with a 01, meaning there is a successful authentication within this stream. We can already see that this will be in the second authentication attempt. However, we can analyze attempt number one for some extra practice:
 
@@ -399,11 +399,11 @@ While it is always nice to have all of this data about these users, we should re
 
 Let's start by looking at our first successful authentication–this is for the **ProfessorX** user. This is going to be under TCP stream 2. While inside of the “Follow TCP stream” window, let's click on any of the data shown in <span style="color:red">red</span>. You might be able to see Wireshark will actually jump to wherever that traffic is actually sent within the packet capture. Within the successful login section of this stream, I clicked on the 0a000000 section, and it took me to frame 652.
 
-![Professor 652](/Home/asssets/profcom/professor652.png)
+![Professor 652](/Home/assets/profcom/professor652.png)
 
 Let's do a deeper dive into this file to hopefully extract some information. We should keep in mind that we are looking at the client traffic right now, meaning the source addresses will be from the client, and the destination addresses will be for the server. If we had clicked the server or <span style="color:blue">blue</span> traffic, we would see source addresses that would belong to the server and destination addresses that belong to the clients. We can close the "Follow TCP Stream" window and make the window on the bottom of the screen larger. We will not dig too deep into these layers right now. But it is important to note, these are in order of how they appear in the OSI model. Feel free to play around with these layers on your own–try to see what all the fields are for each layer. We are going to take a closer look at this window on the bottom of the screen:
 
-![Addressing](/Home/asssets/profcom/addressing.png)
+![Addressing](/Home/assets/profcom/addressing.png)
 
 We can see all our addressing information here–you can either just look at these layers as they appear already, or you can expand them to see the values displayed differently. However, for this example, I will not be expanding these layers. We can see at layer 2, we have two MAC addresses: we have a source (the client) 00:24:97:c4:8e:a0 and a destination (the server) 00:0c:29:af:04:49. Moving up to layer 3, we have our IP addresses, we have a source (the client) 34.0.0.11, and a destination (the server) 10.0.10.2. Finally, we will move to layer 4 here we aren't dealing with addresses but ports: our source port (the client) 47240 and a destination port (the server) 8080.
 
@@ -454,7 +454,7 @@ Destination Port: 8080
 
     Where was this capture completed based on the diagram?
 
-![ProfCom Lab Layout](/Home/asssets/profcom/ProfComLabLayout.png)
+![ProfCom Lab Layout](/Home/assets/profcom/ProfComLabLayout.png)
 
 ## Answers
 **The answers to the question asked within this lab are contained within the [Profos-Systems Communications Lab Answer File](/Home/extradocs/profcom/profcom-answer/).**
