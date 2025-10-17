@@ -1,0 +1,94 @@
+<!-- layouts/shortcodes/parallax.html -->
+<section class="parallax-container" style="background-image: url('{{ .Get "image" }}');">
+  <div class="parallax-content">
+    <div class="parallax-text">
+      {{ if .Get "title" }}
+        <h2>{{ .Get "title" }}</h2>
+      {{ end }}
+      {{ if .Get "description" }}
+        <p>{{ .Get "description" }}</p>
+      {{ end }}
+      {{ if .Inner }}
+        <div class="parallax-inner-content">
+          {{ .Inner | markdownify }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<style>
+  .parallax-container {
+  position: relative;
+  height: 1050px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: fit;
+  overflow: hidden;
+  margin: 2rem 0;
+  }
+
+  .parallax-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+  }
+
+  .parallax-text {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  max-width: 800px;
+  }
+
+  .parallax-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .parallax-text p {
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+
+  .parallax-inner-content {
+  margin-top: 1rem;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+  .parallax-container {
+    height: 300px;
+    background-attachment: scroll;
+  }
+
+  .parallax-text h2 {
+    font-size: 2rem;
+  }
+
+  .parallax-text p {
+    font-size: 1rem;
+  }
+  }
+
+  @media (max-width: 480px) {
+  .parallax-container {
+    height: 250px;
+  }
+
+  .parallax-text h2 {
+    font-size: 1.5rem;
+  }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+  .parallax-container {
+    background-attachment: scroll;
+  }
+  }
+</style>

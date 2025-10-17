@@ -7,13 +7,127 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="//localhost:1313/main/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Welcome to the Weber State Cyber Club</title>
+      <title>Welcome to the Weber State Cyber Club!</title>
       <link>//localhost:1313/main/welcome/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//localhost:1313/main/welcome/</guid>
-      <description>&lt;h1 id=&#34;hello-everyone&#34;&gt;Hello Everyone&lt;/h1&gt;</description>
-      <content>&lt;h1 id=&#34;hello-everyone&#34;&gt;Hello Everyone&lt;/h1&gt;
+      <description>&lt;!-- &lt;div style=&#34;height: 100vh; background-image: url(&#39;/assets/welcome/wsucsclogo.png&#39;); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: fit;&#34;&gt;
+    &lt;h1 style=&#34;color:white; text-align: center; margin: auto; padding: 10vh; width: 100vh; background: rgba(0, 0, 0, 0.45);&#34;&gt;
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+&lt;/h1&gt; --&gt;
+
+&lt;section class=&#34;parallax-container&#34; style=&#34;background-image: url(&#39;static/welcome/banner.png&#39;);&#34;&gt;
+  &lt;div class=&#34;parallax-content&#34;&gt;
+    &lt;div class=&#34;parallax-text&#34;&gt;
+      
+      
+      
+        &lt;div class=&#34;parallax-inner-content&#34;&gt;
+          &lt;h2 id=&#34;custom-title&#34;&gt;Custom Title&lt;/h2&gt;
+&lt;p&gt;You can put &lt;strong&gt;markdown&lt;/strong&gt; here too!&lt;/p&gt;</description>
+      <content>&lt;!-- &lt;div style=&#34;height: 100vh; background-image: url(&#39;/assets/welcome/wsucsclogo.png&#39;); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: fit;&#34;&gt;
+    &lt;h1 style=&#34;color:white; text-align: center; margin: auto; padding: 10vh; width: 100vh; background: rgba(0, 0, 0, 0.45);&#34;&gt;
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+&lt;/h1&gt; --&gt;
+
+&lt;section class=&#34;parallax-container&#34; style=&#34;background-image: url(&#39;static/welcome/banner.png&#39;);&#34;&gt;
+  &lt;div class=&#34;parallax-content&#34;&gt;
+    &lt;div class=&#34;parallax-text&#34;&gt;
+      
+      
+      
+        &lt;div class=&#34;parallax-inner-content&#34;&gt;
+          &lt;h2 id=&#34;custom-title&#34;&gt;Custom Title&lt;/h2&gt;
+&lt;p&gt;You can put &lt;strong&gt;markdown&lt;/strong&gt; here too!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bullet points&lt;/li&gt;
+&lt;li&gt;More content&lt;/li&gt;
+&lt;/ul&gt;
+        &lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;style&gt;
+.parallax-container {
+  position: relative;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.parallax-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.parallax-text {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.parallax-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.parallax-text p {
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.parallax-inner-content {
+  margin-top: 1rem;
+}
+
+ 
+@media (max-width: 768px) {
+  .parallax-container {
+    height: 300px;
+    background-attachment: scroll;
+  }
+  
+  .parallax-text h2 {
+    font-size: 2rem;
+  }
+  
+  .parallax-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax-container {
+    height: 250px;
+  }
+  
+  .parallax-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-container {
+    background-attachment: scroll;
+  }
+}
+&lt;/style&gt;
+&lt;/div&gt;
 </content>
     </item>
     
