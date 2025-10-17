@@ -483,14 +483,14 @@ Client -&amp;gt; Server
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>//localhost:1313/main/welcome/</guid>
-      <description>&lt;section class=&#34;parallax-container&#34; style=&#34;background-image: url(&#39;assets/welcome/wsucsclogo.png&#39;);&#34;&gt;
+      <description>&lt;section class=&#34;parallax-container&#34; style=&#34;background-image: url(&#39;/Home/assets/welcome/wsucsclogo.png&#39;);&#34;&gt;
   &lt;div class=&#34;parallax-content&#34;&gt;
     &lt;div class=&#34;parallax-text&#34;&gt;
       
       
       
         &lt;div class=&#34;parallax-inner-content&#34;&gt;
-          &lt;h2 id=&#34;weber-state-cybersecurity-club&#34;&gt;Weber State Cybersecurity Club&lt;/h2&gt;
+          &lt;h2&gt;Weber State Cybersecurity Club&lt;h2&gt;
 &lt;p&gt;Whether you&amp;rsquo;re curious about cybersecurity, looking to sharpen your skills, or ready to compete, you&amp;rsquo;re in the right place.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;i class=&#34;fas fa-bullhorn&#34;&gt;&lt;/i&gt; Announcements&lt;/strong&gt;&lt;br&gt;
 Stay up-to-date with our latest news, upcoming events, and competition opportunities.&lt;/p&gt;
@@ -499,14 +499,14 @@ Put your skills to the test with our student-created, hands-on labs and challeng
 &lt;p&gt;&lt;strong&gt;&lt;i class=&#34;fas fa-info-circle&#34;&gt;&lt;/i&gt; About the Club&lt;/strong&gt;&lt;br&gt;
 New here? Learn more about who we are, when we meet, and how to get involved. Find out what the club is all about and how you can be part of it.&lt;/p&gt;</description>
       <content>
-&lt;section class=&#34;parallax-container&#34; style=&#34;background-image: url(&#39;assets/welcome/wsucsclogo.png&#39;);&#34;&gt;
+&lt;section class=&#34;parallax-container&#34; style=&#34;background-image: url(&#39;/Home/assets/welcome/wsucsclogo.png&#39;);&#34;&gt;
   &lt;div class=&#34;parallax-content&#34;&gt;
     &lt;div class=&#34;parallax-text&#34;&gt;
       
       
       
         &lt;div class=&#34;parallax-inner-content&#34;&gt;
-          &lt;h2 id=&#34;weber-state-cybersecurity-club&#34;&gt;Weber State Cybersecurity Club&lt;/h2&gt;
+          &lt;h2&gt;Weber State Cybersecurity Club&lt;h2&gt;
 &lt;p&gt;Whether you&amp;rsquo;re curious about cybersecurity, looking to sharpen your skills, or ready to compete, you&amp;rsquo;re in the right place.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;i class=&#34;fas fa-bullhorn&#34;&gt;&lt;/i&gt; Announcements&lt;/strong&gt;&lt;br&gt;
 Stay up-to-date with our latest news, upcoming events, and competition opportunities.&lt;/p&gt;

@@ -4,9 +4,9 @@ showFullContent = true
 hideComments = true
 +++
 
-{{< parallax image="assets/welcome/wsucsclogo.png" >}}
+{{< parallax image="/Home/assets/welcome/wsucsclogo.png" >}}
 
-## Weber State Cybersecurity Club
+<h2>Weber State Cybersecurity Club<h2>
 
 Whether you're curious about cybersecurity, looking to sharpen your skills, or ready to compete, you're in the right place.
 
