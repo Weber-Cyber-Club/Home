@@ -46,7 +46,9 @@
   </url><url>
     <loc>//localhost:1313/main/</loc>
   </url><url>
-    <loc>//localhost:1313/extradocs/profcom-protocol-specification/</loc>
+    <loc>//localhost:1313/extradocs/profcom/profcom-protocol-specification/</loc>
+  </url><url>
+    <loc>//localhost:1313/extradocs/profcom/profcom-answer/</loc>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
   </url><url>

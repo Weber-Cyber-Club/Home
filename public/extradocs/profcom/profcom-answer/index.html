@@ -2,16 +2,22 @@
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
-    <title>Labs :: </title>
+    <title>Profos-Systems Communications Lab Answers :: </title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
+<meta name="description" content="Question 1:
+How many ProfCom Packets were sent in this packet capture? 78 Question 2:
+What are the usernames of the users who successfully log in? ProfessorX &amp; AllAmericanGirl Question 3:
+What password is used to successfully authenticate the 2nd user? Vein.fm Question 4:
+What IP address did the 1st user successfully authenticate from? 34.0.0.11 Question 5:
+What is the IP address of the server? 10.0.10.2 (Reverse Engineering would give you 65.0.0.2) Question 6:
+" />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="//localhost:1313/labs/" />
+<link rel="canonical" href="//localhost:1313/extradocs/profcom/profcom-answer/" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
@@ -48,10 +54,16 @@
 
 
 <meta property="og:locale" content="en" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Labs">
-<meta property="og:description" content="" />
-<meta property="og:url" content="//localhost:1313/labs/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Profos-Systems Communications Lab Answers">
+<meta property="og:description" content="Question 1:
+How many ProfCom Packets were sent in this packet capture? 78 Question 2:
+What are the usernames of the users who successfully log in? ProfessorX &amp; AllAmericanGirl Question 3:
+What password is used to successfully authenticate the 2nd user? Vein.fm Question 4:
+What IP address did the 1st user successfully authenticate from? 34.0.0.11 Question 5:
+What is the IP address of the server? 10.0.10.2 (Reverse Engineering would give you 65.0.0.2) Question 6:
+" />
+<meta property="og:url" content="//localhost:1313/extradocs/profcom/profcom-answer/" />
 <meta property="og:site_name" content="" />
 
   
@@ -64,8 +76,6 @@
 
 
 
-
-  <link href="/labs/index.xml" rel="alternate" type="application/rss+xml" title="" />
 
 
 
@@ -188,55 +198,60 @@
 
   <div class="content">
     
-  
-  <div class="posts">
+<article class="post">
+  <h1 class="post-title">
+    <a href="//localhost:1313/extradocs/profcom/profcom-answer/">Profos-Systems Communications Lab Answers</a>
+  </h1>
+  <div class="post-meta">
     
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="//localhost:1313/labs/profos-systems-communications/">Profos-Systems Communications Lab</a>
-        </h1>
-        <div class="post-meta"><time class="post-date">2025-10-14</time>
-          
-
-        </div>
-
-        
-
-        
-    
-    <img src="//localhost:1313/Home/public/assets/profcom/ProfosBanner.png"
-      class="post-cover"
-      alt="Profos-Systems Communications Lab"
-      title="Cover Image" />
-  
-
-
-
-        <div class="post-content">
-          
-            <h1 id="custom-network-traffic-analysis">Custom Network Traffic Analysis</h1>
-<p><span style="color:red"> <strong>Please do not interact with any IP addresses found inside of this lab! These IP addresses do not belong to me, they are used in an isolated lab, no IP addresses in this lab have any significance!</strong></span></p>
-<h2 id="purpose">Purpose</h2>
-<p>The purpose of this lab is to give students experience dissecting custom networking protocols. Although this can seem like an obscure problem to run into, this is still important, mainly in the realm of learning how packets are structured. This lab will take students through data type sizes, reading offsets, and reading/understanding a protocol specification.</p>
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/labs/profos-systems-communications/">Read more →</a>
-          </div>
-        
-      </article>
-    
-
-    <div class="pagination">
-  <div class="pagination__buttons">
-    
-    
-  </div>
 </div>
 
-  </div>
+  
+  
+
+
+
+  
+
+  <div class="post-content"><div>
+        <p><strong>Question 1:</strong></p>
+<pre><code>How many ProfCom Packets were sent in this packet capture? 78
+</code></pre>
+<p><strong>Question 2:</strong></p>
+<pre><code>What are the usernames of the users who successfully log in? ProfessorX &amp; AllAmericanGirl
+</code></pre>
+<p><strong>Question 3:</strong></p>
+<pre><code>What password is used to successfully authenticate the 2nd user? Vein.fm
+</code></pre>
+<p><strong>Question 4:</strong></p>
+<pre><code>What IP address did the 1st user successfully authenticate from? 34.0.0.11
+</code></pre>
+<p><strong>Question 5:</strong></p>
+<pre><code>What is the IP address of the server? 10.0.10.2 (Reverse Engineering would give you 65.0.0.2)
+</code></pre>
+<p><strong>Question 6:</strong></p>
+<pre><code>How many messages were sent by the 2nd user that successfully authenticated? 2
+</code></pre>
+<p><strong>Question 7:</strong></p>
+<pre><code>What is the flag that was transferred by the protocol? WSU-WALL-0808
+</code></pre>
+<p><strong>Question 8:</strong></p>
+<pre><code>Where was this capture completed based on the diagram? This packet capture is taken from within the ProfCom
+Hosting Site, specifically on the ProfCom server itself. Although, I am really just looking for the “ProfCom
+Hosting Site.” This can be found by looking at the IP addresses coming from the clients vs the IP address of
+the server. If we look at the TTL of the packets when they are being captured we would also see the clients TTL
+is set to 61, meaning there must have been three layer 3 hops before the packet reached the server. This would
+match the diagram assuming the switch between the host and the router is a multi-layer switch, which in this
+case, it is. In this lab scenario you are also better off capturing on the server side. This is because it is
+the only way to ensure we can capture all of the data from all of our clients.
+</code></pre>
+
+      </div></div>
+
+  
+
+  
+</article>
 
   </div>
 

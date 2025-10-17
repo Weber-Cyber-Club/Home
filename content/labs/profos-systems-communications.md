@@ -1,9 +1,8 @@
 +++
-title = "Placeholder"
+title = "Profos-Systems Communications Lab"
 date = "2025-10-14T19:06:30-06:00"
 author = ""
-cover = ""
-coverCaption = ""
+cover = "/Home/public/assets/profcom/ProfosBanner.png"
 description = ""
 categories = ["NTA", "Passwords"]
 showFullContent = false
@@ -11,7 +10,7 @@ readingTime = false
 hideComments = false
 +++
 
-# Reverse Engineering and Network Traffic Analysis
+# Custom Network Traffic Analysis
 
 <span style="color:red"> **Please do not interact with any IP addresses found inside of this lab! These IP addresses do not belong to me, they are used in an isolated lab, no IP addresses in this lab have any significance!**</span>
 
@@ -89,7 +88,7 @@ With this information, hopefully now you can see why the four questions we are a
 
 ### Preliminary Research
 
-Before we begin, we should read the protocol specification to answer the four questions we defined to begin this lab: [Protocol Specification](ProfComProtocolSpec.md).
+Before we begin, we should read the protocol specification to answer the four questions we defined to begin this lab: [Protocol Specification](/Home/extradocs/profcom/profcom-protocol-specification/).
 
 **Endianess/Byte Order:** According to our protocol specification, this data will be listed in Little-Endian format. There are a few ways we could have found this, albeit, without the help of the specification. Once we start to look at the data, we will notice all integers are listed without a bunch of preliminary zeros. The strings these integers are referencing are also not very large strings, so we can assume we are starting with our least significant bit, not the most significant bit. Little-endian will also read in a way that makes sense to read in English; although, if you're used to reading binary, it might not make sense at first, as bits are read from most to least significant.
 
@@ -97,13 +96,13 @@ Before we begin, we should read the protocol specification to answer the four qu
 
 **Which layers are above and below the protocol?** Seeing this is an application, we cannot have any layers above the protocol. We are told in the specification that we are using TCP as our layer 4 protocol. With this information, we can also assume that we are using an IP protocol, seeing that they are the only protocols that work well with TCP. We do not currently know for sure what our layer 2 protocol is, but we have a lot of information already.
 
-One last thing we should keep in mind before looking at our packet capture is what data types we are working with and how big they are. This information is all referenced with the [ProfCom Protocol Specification](ProfComProtocolSpec.md). We can see we will deal with Integers, Booleans, and Strings (Chars). The integers are listed as being 4 byte integers, a boolean is going to be a single byte, and the strings will be whichever size is specified by the integer listed prior to the string. All data will be listed in hexadecimal format. This is why a boolean is listed as a whole byte instead of a single bit; although, you could definitely list a boolean as a single bit.
+One last thing we should keep in mind before looking at our packet capture is what data types we are working with and how big they are. This information is all referenced with the [ProfCom Protocol Specification](/Home/extradocs/profcom/profcom-protocol-specification/). We can see we will deal with Integers, Booleans, and Strings (Chars). The integers are listed as being 4 byte integers, a boolean is going to be a single byte, and the strings will be whichever size is specified by the integer listed prior to the string. All data will be listed in hexadecimal format. This is why a boolean is listed as a whole byte instead of a single bit; although, you could definitely list a boolean as a single bit.
 
 ### Getting into the Analysis of the Protocol
 
 **Obtaining the PCAP**
 
-We are going to be doing analysis of the [Profcom.pcap](Profcom.pcap) file which should be in the /Some/Directory/Club-Challenges/Labs/Profcom/ directory as long as you have cloned this repository to your computer. If you have not, you can also download the file here [Profcom.pcap](Profcom.pcap).
+We are going to be doing analysis of the [Profcom.pcap](/Home/asssets/profcom/Profcom.pcap) file which should be in the /Some/Directory/Club-Challenges/Labs/Profcom/ directory as long as you have cloned this repository to your computer. If you have not, you can also download the file here [Profcom.pcap](/Home/asssets/profcom/Profcom.pcap).
 
 **Opening the File**
 
@@ -119,13 +118,13 @@ If you are installing wireshark on another distribution that is not debian based
 
 Let's open Wireshark:
 
-![Wireshark Homepage](assets/wiresharkhome.png)
+![Wireshark Homepage](/Home/asssets/profcom/wiresharkhome.png)
 
 We are going to go to File > Open, and navigate to where your Profcom.pcap file has been stored.
 
 This is what we should see when we first open our file it can seem like a lot to analyze, but we are going to narrow it down a bit to make it easier.
 
-![Profcom Initial Open](assets/profcominitial.png)
+![Profcom Initial Open](/Home/asssets/profcom/profcominitial.png)
 
 **Let's add our first filter:** According to our protocol specification, we are dealing with a TCP based protocol operating on port 8080. Now, in some situations, we might end up with HTTP traffic mixed in with the traffic we are looking for. This is because sometimes people will use 8080 for a web server. We will not need to contend with this issue in our situation. The syntax of this filter will be:
 
@@ -133,15 +132,15 @@ This is what we should see when we first open our file it can seem like a lot to
 
 After applying this filter, we are seeing a big change in the amount of traffic we have to deal with. If we look in the bottom right of the screen, we can see the answer to our first question, we see the total packets in the file listed as 2338, while we are currently displaying 78 packets. This is because we have filtered to only see traffic running on port 8080, as stated previously this would be all our ProfCom packets.
 
-![Packets Displayed](assets/packetsdisplayed.png)
+![Packets Displayed](/Home/asssets/profcom/packetsdisplayed.png)
 
 To make this analysis as easy as possible for us, we are going to break this analysis up into the individual TCP streams (a conversation over TCP). Doing this in Wireshark, we will see all of our data from a given stream all in one window. To do this we will click the first packet–in the top bar we will go to Analyze > Follow > TCP Stream. The result of this operation should give you the following window:
 
-![TCP Steam 1](assets/stream1.png)
+![TCP Steam 1](/Home/asssets/profcom/stream1.png)
 
 One last thing we want to do before analyzing this file is change which format is being displayed. Right now, Wireshark is showing us an ASCII representation, which is great, when all of our data is human readable. However, in this case, it is not! We are going to change from ASCII to RAW. In order to do this, we will go to the "Show As" list, and change from ASCII to RAW. This will show all of our data as raw hexadecimal bytes.
 
-![RAW Format](assets/rawformat.png)
+![RAW Format](/Home/asssets/profcom/rawformat.png)
 
 **Analyzing RAW Packets**
 
@@ -158,7 +157,7 @@ Client -> Server
         Char Password
 ```
 
-Another nice aspect of Wireshark is its ability to colorize these conversations for us. The key states that everything colored <span style="color:red">red</span> is the client, everything colored <span style="color:blue">blue</span> is the server. We are starting with the client sending to the server, so we are looking for our first <span style="color:red">red</span> segment of bytes. This segment would be:
+Another nice aspect of Wireshark is its ability to colorize these conversations for us. The key states that everything colored <span style="color:red">red</span> is the client, everything colored <span style="color:lightblue">blue</span> is the server. We are starting with the client sending to the server, so we are looking for our first <span style="color:red">red</span> segment of bytes. This segment would be:
 
     0a000000
     5269636b79426f626279160000000c231c2a30042c2b31032c3736311c2a303709243631
@@ -177,13 +176,13 @@ We know we have currently read up to offset 4, because we went from offset 0 and
 
 Now that we know the segment of data we are dealing with, we can convert this hexadecimal to readable text. We are dealing with characters, so we do not need to worry about endianness. We are just converting each byte to its corresponding ASCII character. One of the easiest ways to do this is using [cyberchef.org](https://cyberchef.org/). If you follow the previous link, you will be brought to their page. We are going to look for a way to convert from hexadecimal to ASCII. By default, all the conversions from functions just convert whatever the input data type is to human-readable ASCII form, so in the search bar, let's lookup hex.
 
-![hex](assets/hex.png)
+![hex](/Home/asssets/profcom/hex.png)
 
 Double click "From Hex" and it should be added to your recipe.
 
 Now that we have a recipe created, we can add our hexadecimal text into the input box, and we should be given an output that is clear, human-readable text.
 
-![Ouput 1](assets/output1.png)
+![Ouput 1](/Home/asssets/profcom/output1.png)
 
 We see, based on this conversion, our first username that was sent is **RickyBobby**.
 
@@ -198,7 +197,7 @@ We see this is hexadecimal number 16. Now, remember, this is hexadecimal not dec
 
 Plugging this into the previously used "From Hex" function, we are going to see something strange–our data seems to have been corrupted!
 
-![Corruption](assets/corrupted.png)
+![Corruption](/Home/asssets/profcom/corrupted.png)
 
 We need to remember the protocol specification references an XOR key that was used to "encrypt the data". If you would like to learn more about XORs, [here](https://en.wikipedia.org/wiki/XOR_gate) is a link to read more about them. I will not cover them in this lab, as this is more of a lab on protocols not ciphering. The XOR that was given to us is the key 0x45, which means the binary we are doing an XOR operation over is 0100 0101. The decryption process would look like this:
 
@@ -230,7 +229,7 @@ This is a very tough operation to do by hand for 22 different bytes, so thankful
 
 We are going to create a recipe to undo this XOR cipher. We already have something like a pseudocode representation above. Thankfully, a lot of these conversions are unneeded in Cyberchef. We are only going to need to go "From Hex" and do an "XOR" operation using hex key value 45.
 
-![xorrecipe](assets/xor.png)
+![xorrecipe](/Home/asssets/profcom/xor.png)
 
 Now that we have our recipe built, we can plug in our entire password from the PCAP, and we should get our plaintext password.
 
@@ -261,7 +260,7 @@ We see that the server responds with 00 at the end of this authentication, and t
 
 In the bottom right corner, we will click the up arrow next to the stream number, and go to TCP stream number 2:
 
-![TCP Stream 2](assets/stream2.png)
+![TCP Stream 2](/Home/asssets/profcom/stream2.png)
 
 Looking at Stream 2 we already have a very promising sign–we can see the server has responded with a 01, meaning there is a successful authentication within this stream. We can already see that this will be in the second authentication attempt. However, we can analyze attempt number one for some extra practice:
 
@@ -380,7 +379,7 @@ Now we have one last integer to look at which is:
 
     Decimal = 14
 
-This is followed by a final message from **All American Girl**, which is the flag. If you have followed along, this will be your knowledge check to ensure you have grasped this topic. I will only share this answer in the [answers section](#answers) of this lab. Please attempt to decrypt the flag before viewing the answer!
+This is followed by a final message from **All American Girl**, which is the flag. If you have followed along, this will be your knowledge check to ensure you have grasped this topic. I will only share this answer in the [answers files](/Home/extradocs/profcom/profcom-answer/) of this lab. Please attempt to decrypt the flag before viewing the answer!
 
 If you would like an extra practice problem you can attempt stream 4; although, this is an unsuccessful login attempt.
 
@@ -400,11 +399,11 @@ While it is always nice to have all of this data about these users, we should re
 
 Let's start by looking at our first successful authentication–this is for the **ProfessorX** user. This is going to be under TCP stream 2. While inside of the “Follow TCP stream” window, let's click on any of the data shown in <span style="color:red">red</span>. You might be able to see Wireshark will actually jump to wherever that traffic is actually sent within the packet capture. Within the successful login section of this stream, I clicked on the 0a000000 section, and it took me to frame 652.
 
-![Professor 652](assets/professor652.png)
+![Professor 652](/Home/asssets/profcom/professor652.png)
 
 Let's do a deeper dive into this file to hopefully extract some information. We should keep in mind that we are looking at the client traffic right now, meaning the source addresses will be from the client, and the destination addresses will be for the server. If we had clicked the server or <span style="color:blue">blue</span> traffic, we would see source addresses that would belong to the server and destination addresses that belong to the clients. We can close the "Follow TCP Stream" window and make the window on the bottom of the screen larger. We will not dig too deep into these layers right now. But it is important to note, these are in order of how they appear in the OSI model. Feel free to play around with these layers on your own–try to see what all the fields are for each layer. We are going to take a closer look at this window on the bottom of the screen:
 
-![Addressing](assets/addressing.png)
+![Addressing](/Home/asssets/profcom/addressing.png)
 
 We can see all our addressing information here–you can either just look at these layers as they appear already, or you can expand them to see the values displayed differently. However, for this example, I will not be expanding these layers. We can see at layer 2, we have two MAC addresses: we have a source (the client) 00:24:97:c4:8e:a0 and a destination (the server) 00:0c:29:af:04:49. Moving up to layer 3, we have our IP addresses, we have a source (the client) 34.0.0.11, and a destination (the server) 10.0.10.2. Finally, we will move to layer 4 here we aren't dealing with addresses but ports: our source port (the client) 47240 and a destination port (the server) 8080.
 
@@ -455,55 +454,15 @@ Destination Port: 8080
 
     Where was this capture completed based on the diagram?
 
-![ProfCom Lab Layout](assets/ProfComLabLayout.png)
+![ProfCom Lab Layout](/Home/asssets/profcom/ProfComLabLayout.png)
+
+## Answers
+**The answers to the question asked within this lab are contained within the [Profos-Systems Communications Lab Answer File](/Home/extradocs/profcom/profcom-answer/).**
 
 ## Conclusion
 
-Throughout this lab, you have hopefully learned many new things in the world of packet analysis, more specifically dissecting a custom networking protocol. In all, you have learned how to read a protocol specification. While this one is quite simple, you now have the foundation to read any kind of protocol specification. You have also learned what the different layers of the OSI model are, what they do, and how they work together to provide end-to-end communication. You touched on file offsets, both how to use them to segment data for analysis, and how to find an offset. We looked into the concept of security through obscurity, seeing first-hand why this is such an inadequate security measure. Finally, you got to use Wireshark's built-in analysis tools to find information such as source and destination address, from layer 2 up to layer 4. Hopefully this has been a very informative lab for you. If you would like an extra challenge, attempt to reverse engineer the [ProfComClient](ProfComClient) file that is within this directory. Try to find the XOR key that is used for encryption, or try to find the actual IP address that the clients used to access the ProfComServer. If you would like to learn more about protocol analysis [Wireshark](https://www.wireshark.org) has many resources, all of which teach you very valuable lessons in packet analysis.
-
-## Answers:
-
-**Question 1:**
-
-    How many ProfCom Packets were sent in this packet capture? 78
-
-**Question 2:**
-
-    What are the usernames of the users who successfully log in? ProfessorX & AllAmericanGirl
-
-**Question 3:**
-
-    What password is used to successfully authenticate the 2nd user? Vein.fm
-
-**Question 4:**
-
-    What IP address did the 1st user successfully authenticate from? 34.0.0.11
-
-**Question 5:**
-
-    What is the IP address of the server? 10.0.10.2 (Reverse Engineering would give you 65.0.0.2)
-
-**Question 6:**
-
-    How many messages were sent by the 2nd user that successfully authenticated? 2
-
-**Question 7:**
-
-    What is the flag that was transferred by the protocol? WSU-WALL-0808
-
-**Question 8:**
-
-    Where was this capture completed based on the diagram? This packet capture is taken from within the ProfCom
-    Hosting Site, specifically on the ProfCom server itself. Although, I am really just looking for the “ProfCom
-    Hosting Site.” This can be found by looking at the IP addresses coming from the clients vs the IP address of
-    the server. If we look at the TTL of the packets when they are being captured we would also see the clients TTL
-    is set to 61, meaning there must have been three layer 3 hops before the packet reached the server. This would
-    match the diagram assuming the switch between the host and the router is a multi-layer switch, which in this
-    case, it is. In this lab scenario you are also better off capturing on the server side. This is because it is
-    the only way to ensure we can capture all of the data from all of our clients.
+Throughout this lab, you have hopefully learned many new things in the world of packet analysis, more specifically dissecting a custom networking protocol. In all, you have learned how to read a protocol specification. While this one is quite simple, you now have the foundation to read any kind of protocol specification. You have also learned what the different layers of the OSI model are, what they do, and how they work together to provide end-to-end communication. You touched on file offsets, both how to use them to segment data for analysis, and how to find an offset. We looked into the concept of security through obscurity, seeing first-hand why this is such an inadequate security measure. Finally, you got to use Wireshark's built-in analysis tools to find information such as source and destination address, from layer 2 up to layer 4. Hopefully this has been a very informative lab for you. If you would like an extra challenge, attempt to reverse engineer the [ProfComClient](/Home/assets/profcom/ProfComClient) file that is within this directory. Try to find the XOR key that is used for encryption, or try to find the actual IP address that the clients used to access the ProfComServer. If you would like to learn more about protocol analysis [Wireshark](https://www.wireshark.org) has many resources, all of which teach you very valuable lessons in packet analysis.
 
 **Until Next Time!**
 
 **The Professor**
-
-[ProfCom Protocol Specification](/Home/extradocs/profcom-protocol-specification/)

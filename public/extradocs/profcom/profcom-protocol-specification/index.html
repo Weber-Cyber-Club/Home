@@ -2,16 +2,18 @@
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
-    <title>Extradocs :: </title>
+    <title>ProfCom Protocol Specification :: </title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
+<meta name="description" content="Purpose The purpose of this specification is to assist in the analysis of the Profos-Systems Communication Suite.
+Data Types Data will be in Little-Endian Integer = 4 bytes Boolean = 1 byte Strings (Char) Length will be defined by the integer value before the string. What is ProfCom? ProfCom is a communication protocol used to relay important messages back to a central command. According to our intel ProfCom Servers operate over TCP on port 8080 to try and mask the identity of the application. As a method of &ldquo;security&rdquo; ProfCom uses an XOR operation to obfuscate the data sent by the application. After some reverse engineering of the ProfCom client application we have found the XOR key is 0x45. The flow of the client server interaction is given below:
+" />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="//localhost:1313/extradocs/" />
+<link rel="canonical" href="//localhost:1313/extradocs/profcom/profcom-protocol-specification/" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
@@ -48,10 +50,12 @@
 
 
 <meta property="og:locale" content="en" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Extradocs">
-<meta property="og:description" content="" />
-<meta property="og:url" content="//localhost:1313/extradocs/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="ProfCom Protocol Specification">
+<meta property="og:description" content="Purpose The purpose of this specification is to assist in the analysis of the Profos-Systems Communication Suite.
+Data Types Data will be in Little-Endian Integer = 4 bytes Boolean = 1 byte Strings (Char) Length will be defined by the integer value before the string. What is ProfCom? ProfCom is a communication protocol used to relay important messages back to a central command. According to our intel ProfCom Servers operate over TCP on port 8080 to try and mask the identity of the application. As a method of &ldquo;security&rdquo; ProfCom uses an XOR operation to obfuscate the data sent by the application. After some reverse engineering of the ProfCom client application we have found the XOR key is 0x45. The flow of the client server interaction is given below:
+" />
+<meta property="og:url" content="//localhost:1313/extradocs/profcom/profcom-protocol-specification/" />
 <meta property="og:site_name" content="" />
 
   
@@ -64,8 +68,6 @@
 
 
 
-
-  <link href="/extradocs/index.xml" rel="alternate" type="application/rss+xml" title="" />
 
 
 
@@ -188,99 +190,65 @@
 
   <div class="content">
     
-  
-  <div class="posts">
+<article class="post">
+  <h1 class="post-title">
+    <a href="//localhost:1313/extradocs/profcom/profcom-protocol-specification/">ProfCom Protocol Specification</a>
+  </h1>
+  <div class="post-meta">
     
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="//localhost:1313/extradocs/profcom/profcom-protocol-specification/">ProfCom Protocol Specification</a>
-        </h1>
-        <div class="post-meta">
-          
+</div>
 
-        </div>
-
-        
-
-        
+  
+  
 
 
 
-        <div class="post-content">
-          
-            <h2 id="purpose">Purpose</h2>
+  
+
+  <div class="post-content"><div>
+        <h2 id="purpose">Purpose<a href="#purpose" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>The purpose of this specification is to assist in the analysis of the Profos-Systems Communication Suite.</p>
-<h2 id="data-types">Data Types</h2>
+<h2 id="data-types">Data Types<a href="#data-types" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li>Data will be in Little-Endian</li>
 <li>Integer = 4 bytes</li>
 <li>Boolean = 1 byte</li>
 <li>Strings (Char) Length will be defined by the integer value before the string.</li>
 </ul>
-<h2 id="what-is-profcom">What is ProfCom?</h2>
+<h2 id="what-is-profcom">What is ProfCom?<a href="#what-is-profcom" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>ProfCom is a communication protocol used to relay important messages back to a central command. According to our intel ProfCom Servers operate over TCP on port 8080 to try and mask the identity of the application. As a method of &ldquo;security&rdquo; ProfCom uses an XOR operation to obfuscate the data sent by the application. After some reverse engineering of the ProfCom client application we have found the XOR key is 0x45. The flow of the client server interaction is given below:</p>
-          
-        </div>
+<h3 id="profcom-client-server-interaction">ProfCom Client Server Interaction<a href="#profcom-client-server-interaction" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><strong>Login Process:</strong></p>
+<pre tabindex="0"><code>
+Client -&gt; Server
 
-        
-          <div>
-            <a class="read-more button" href="/extradocs/profcom/profcom-protocol-specification/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="//localhost:1313/extradocs/profcom/profcom-answer/">Profos-Systems Communications Lab Answers</a>
-        </h1>
-        <div class="post-meta">
-          
+    Integer Length of Username
+    Char Username
+    Integer Length of Password
+    Char Password
 
-        </div>
+Server -&gt; Client
 
-        
+    Boolean Password Accept/Rejected
+</code></pre><p><strong>If authentication fails, the login process is reinitiated by the client.</strong></p>
+<p><strong>Data Transfer:</strong></p>
+<pre tabindex="0"><code>
+Client -&gt; Server
 
-        
+        Integer Number of Messages to Send
 
+Client -&gt; Server
 
+    Integer Length of Message
+    Char Data
+</code></pre><p><strong>After all messages are sent the client and server will disconnect.</strong></p>
 
-        <div class="post-content">
-          
-            <p><strong>Question 1:</strong></p>
-<pre><code>How many ProfCom Packets were sent in this packet capture? 78
-</code></pre>
-<p><strong>Question 2:</strong></p>
-<pre><code>What are the usernames of the users who successfully log in? ProfessorX &amp; AllAmericanGirl
-</code></pre>
-<p><strong>Question 3:</strong></p>
-<pre><code>What password is used to successfully authenticate the 2nd user? Vein.fm
-</code></pre>
-<p><strong>Question 4:</strong></p>
-<pre><code>What IP address did the 1st user successfully authenticate from? 34.0.0.11
-</code></pre>
-<p><strong>Question 5:</strong></p>
-<pre><code>What is the IP address of the server? 10.0.10.2 (Reverse Engineering would give you 65.0.0.2)
-</code></pre>
-<p><strong>Question 6:</strong></p>
-          
-        </div>
+      </div></div>
 
-        
-          <div>
-            <a class="read-more button" href="/extradocs/profcom/profcom-answer/">Read more →</a>
-          </div>
-        
-      </article>
-    
+  
 
-    <div class="pagination">
-  <div class="pagination__buttons">
-    
-    
-  </div>
-</div>
-
-  </div>
+  
+</article>
 
   </div>
 
