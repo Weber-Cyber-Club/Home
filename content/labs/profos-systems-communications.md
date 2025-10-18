@@ -3,7 +3,7 @@ title = "Profos-Systems Communications Lab"
 date = "2025-10-14T19:06:30-06:00"
 author = "The Professor"
 cover = "/Home/assets/profcom/ProfosBanner.png"
-description = "The purpose of this lab is to give students experience dissecting custom networking protocols. Although this can seem like an obscure problem to run into, this is still important, mainly in the realm of learning how packets are structured, or IoT device communication. This lab will take students through data type sizes, reading offsets, and reading/understanding a protocol specification."
+description = "The purpose of this lab is to give students experience dissecting custom networking protocols. Although this can seem like an obscure problem to run into, this is still important, mainly in the realm of learning how packets are structured, or IoT device communication. This lab will take students through data types, sizes, reading offsets, and reading/understanding a protocol specification."
 categories = ["NTA", "Passwords"]
 showFullContent = false
 readingTime = false
@@ -16,7 +16,7 @@ hideComments = false
 
 ## Purpose
 
-The purpose of this lab is to give students experience dissecting custom networking protocols. Although this can seem like an obscure problem to run into, this is still important, mainly in the realm of learning how packets are structured, or IoT device communication. This lab will take students through data type sizes, reading offsets, and reading/understanding a protocol specification.
+The purpose of this lab is to give students experience dissecting custom networking protocols. Although this can seem like an obscure problem to run into, this is still important, mainly in the realm of learning how packets are structured, or IoT device communication. This lab will take students through data types, sizes, reading offsets, and reading/understanding a protocol specification.
 
 ## Background
 
