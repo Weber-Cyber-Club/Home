@@ -2,7 +2,7 @@
 title = "{{ replace .TranslationBaseName "-" " " | title }}"
 date = "{{ .Date }}"
 author = ""
-cover = ""
+cover = "/Home/assets/challenge_banner.svg"
 coverCaption = ""
 categories = ["", ""]
 description = ""

@@ -2,7 +2,7 @@
 title = "Placeholder"
 date = "2025-10-14T19:06:39-06:00"
 author = ""
-cover = ""
+cover = "/Home/assets/challenge_banner.svg"
 coverCaption = ""
 tags = ["", ""]
 keywords = ["", ""]
