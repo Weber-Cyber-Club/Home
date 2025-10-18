@@ -2,7 +2,7 @@
 title = "Meta"
 date = "2025-10-17T22:11:04-06:00"
 author = "Sahara Krompel"
-cover = "/Home/assets/lab_banner.svg"
+cover = "/Home/assets/doomtech_banner.svg"
 coverCaption = ""
 categories = ["OSINT"]
 description = "This lab is adapted from the National Cyber League Gymnasium Open Source Intelligence easy challenge titled *Meta* The purpose of this lab is to teach students how to extract and analyze metadata from image files using both online tools and command-line utilities, while understanding the security and privacy implications of embedded metadata."
@@ -121,4 +121,4 @@ In this lab, students have learned how to extract and analyze metadata from imag
 
 ## Answers
 
-**The answers to the question asked within this lab are contained within the [Meta Lab Answer File](/Home/extradocs/meta/Meta-Answers.md).**
+**The answers to the question asked within this lab are contained within the [Meta Lab Answer File](/Home/extradocs/meta/meta-answers/).**
