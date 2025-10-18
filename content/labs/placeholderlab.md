@@ -1,5 +1,5 @@
 +++
-title = "Placeholderlab"
+title = "Placeholder Lab"
 date = "2025-10-17T17:59:36-06:00"
 author = ""
 cover = "/Home/assets/lab_banner.svg"
