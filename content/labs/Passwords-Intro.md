@@ -22,7 +22,7 @@ The purpose of this lab is to introduce students to hashes, hash types, and pass
 
 * __(Strong) Collision Resistance__: The probability of a particular *n*-bit output given two distinct string inputs is 2<sup>-n</sup>. What this means for every possible input, we have an equal change of any possible output. Making these functions excellent for storing something like a password, or being used to find a checksum of a file. We have a very low chance for a collision of hashes (which will be covered later) especially as the bit size goes up. This is the optimal design for security.
 
-* __Preimage Resistance__: The probability of finding an input string that matches a hash value (called a preimage attack) is $2<sup>-n</sup>. The resistance to this kind of attack is called the CHFs security strength. A CHF that has *n* bits of hash value is expected to have a preimage resistance strength of *n*.
+* __Preimage Resistance__: The probability of finding an input string that matches a hash value (called a preimage attack) is 2<sup>-n</sup>. The resistance to this kind of attack is called the CHFs security strength. A CHF that has *n* bits of hash value is expected to have a preimage resistance strength of *n*.
 
 * __Second Preimage Resistance__: Given an input *m*<sub>1</sub> it should be difficult to find a different message *m*<sub>2</sub> where hash(*m*<sub>1</sub>) == hash(*m*<sub>2</sub>). This property is also called weak collision resistance.
 
