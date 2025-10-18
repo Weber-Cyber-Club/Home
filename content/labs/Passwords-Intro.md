@@ -2,7 +2,7 @@
 title = "Passwords Intro"
 date = "2025-10-17T21:26:09-06:00"
 author = "The Professor"
-cover = "/Home/assets/ProfosBanner.svg"
+cover = "/Home/assets/ProfessorsBanner.png"
 coverCaption = ""
 categories = ["Passwords"]
 description = "The purpose of this lab is to introduce students to hashes, hash types, and password attacks. This lab will explore what hashing is and how it works, how to identify different types of hashes, ways to break hashes, and how to be secure when using hashing algorithms."
