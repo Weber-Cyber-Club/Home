@@ -3,10 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//localhost:1313/</loc>
-    <lastmod>2025-10-17T17:59:36-06:00</lastmod>
+    <lastmod>2025-10-17T22:11:04-06:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/</loc>
+    <lastmod>2025-10-17T22:11:04-06:00</lastmod>
   </url><url>
     <loc>//localhost:1313/labs/</loc>
-    <lastmod>2025-10-17T17:59:36-06:00</lastmod>
+    <lastmod>2025-10-17T22:11:04-06:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/labs/meta/</loc>
+    <lastmod>2025-10-17T22:11:04-06:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/osint/</loc>
+    <lastmod>2025-10-17T22:11:04-06:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/passwords/</loc>
+    <lastmod>2025-10-17T21:26:09-06:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/labs/passwords-intro/</loc>
+    <lastmod>2025-10-17T21:26:09-06:00</lastmod>
   </url><url>
     <loc>//localhost:1313/labs/placeholderlab/</loc>
     <lastmod>2025-10-17T17:59:36-06:00</lastmod>
@@ -29,13 +44,7 @@
     <loc>//localhost:1313/challenges/placeholder/</loc>
     <lastmod>2025-10-14T19:06:39-06:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
-    <lastmod>2025-10-14T19:06:30-06:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/categories/nta/</loc>
-    <lastmod>2025-10-14T19:06:30-06:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/categories/passwords/</loc>
     <lastmod>2025-10-14T19:06:30-06:00</lastmod>
   </url><url>
     <loc>//localhost:1313/labs/profos-systems-communications/</loc>

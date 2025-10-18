@@ -6,7 +6,93 @@
     <description>Recent content in Labs on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Oct 2025 21:26:09 -0600</lastBuildDate><atom:link href="//localhost:1313/labs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Oct 2025 22:11:04 -0600</lastBuildDate><atom:link href="//localhost:1313/labs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meta</title>
+      <link>//localhost:1313/labs/meta/</link>
+      <pubDate>Fri, 17 Oct 2025 22:11:04 -0600</pubDate>
+      
+      <guid>//localhost:1313/labs/meta/</guid>
+      <description>&lt;h1 id=&#34;meta&#34;&gt;Meta&lt;/h1&gt;
+&lt;h2 id=&#34;purpose&#34;&gt;Purpose:&lt;/h2&gt;
+&lt;p&gt;This lab is adapted from the National Cyber League Gymnasium Open Source Intelligence easy challenge &amp;ldquo;Meta.&amp;rdquo; The purpose of this lab is to teach students how to extract and analyze metadata from image files using both online tools and command-line utilities, while understanding the security and privacy implications of embedded metadata.&lt;/p&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background:&lt;/h2&gt;
+&lt;h3 id=&#34;what-is-metadata&#34;&gt;What is Metadata?&lt;/h3&gt;
+&lt;p&gt;Meta- is a prefix meaning &amp;ldquo;self-referential.&amp;rdquo; Therefore, metadata essentially means &amp;ldquo;data about data.&amp;rdquo; This is information that describes, contextualizes, or provides details about other data. In OSINT (Open Source Intelligence) and digital forensics, metadata is a critical source of intelligence that often reveals more than the visible content itself. When you create, modify, or share a file, systems automatically embed metadata that can include usernames, software versions, GPS coordinates, timestamps, edit history, and device information.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;meta&#34;&gt;Meta&lt;/h1&gt;
+&lt;h2 id=&#34;purpose&#34;&gt;Purpose:&lt;/h2&gt;
+&lt;p&gt;This lab is adapted from the National Cyber League Gymnasium Open Source Intelligence easy challenge &amp;ldquo;Meta.&amp;rdquo; The purpose of this lab is to teach students how to extract and analyze metadata from image files using both online tools and command-line utilities, while understanding the security and privacy implications of embedded metadata.&lt;/p&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background:&lt;/h2&gt;
+&lt;h3 id=&#34;what-is-metadata&#34;&gt;What is Metadata?&lt;/h3&gt;
+&lt;p&gt;Meta- is a prefix meaning &amp;ldquo;self-referential.&amp;rdquo; Therefore, metadata essentially means &amp;ldquo;data about data.&amp;rdquo; This is information that describes, contextualizes, or provides details about other data. In OSINT (Open Source Intelligence) and digital forensics, metadata is a critical source of intelligence that often reveals more than the visible content itself. When you create, modify, or share a file, systems automatically embed metadata that can include usernames, software versions, GPS coordinates, timestamps, edit history, and device information.&lt;/p&gt;
+&lt;p&gt;The image metadata in this lab is stored in EXIF (Exchangeable Image File Format) format. EXIF is a standard that specifies how metadata is embedded within image and audio files. EXIF data is stored alongside the actual image pixels.&lt;/p&gt;
+&lt;h3 id=&#34;how-is-metadata-used&#34;&gt;How is Metadata Used?&lt;/h3&gt;
+&lt;h4 id=&#34;from-a-red-teamattacker-perspective&#34;&gt;From a Red Team/Attacker Perspective:&lt;/h4&gt;
+&lt;p&gt;Metadata can be scanned to identify software vulnerabilities and reconnaissance opportunities. GPS coordinates embedded in posted photos can expose facility locations or travel patterns.&lt;/p&gt;
+&lt;h4 id=&#34;from-a-digital-forensicsincident-responseblue-team-perspective&#34;&gt;From a Digital Forensics/Incident Response/Blue Team Perspective:&lt;/h4&gt;
+&lt;p&gt;Metadata can be used to reconstruct attack timelines by correlating file creation timestamps, last modified dates, and access logs across systems.&lt;/p&gt;
+&lt;h2 id=&#34;lab-guide&#34;&gt;Lab Guide:&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/Home/assets/meta/Meta.jpg&#34; alt=&#34;Meta.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This lab contains one &lt;a href=&#34;//localhost:1313/Home/assets/meta/Meta.jpg&#34;&gt;JPEG image file&lt;/a&gt; featuring a baby lamb. There are two main ways to extract the metadata from this file and answer the &lt;a href=&#34;//localhost:1313/labs/meta/#questions&#34;&gt;questions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The first of these ways is to utilize an online tool such as &lt;a href=&#34;https://www.metadata2go.com/&#34;&gt;https://www.metadata2go.com/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The second of these ways is to utilize command line tools. Some tools that are most useful for the task of metadata extraction (in the case of this lab) are &lt;code&gt;file&lt;/code&gt;, and &lt;code&gt;strings&lt;/code&gt;, &lt;code&gt;ExifTool&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The &lt;code&gt;file&lt;/code&gt; Command:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;file&lt;/code&gt; is a command-line utility that identifies file types and provides basic information about files. Rather than trusting file extensions (which can be changed or spoofed), file examines the actual content and structure of a file to determine what it really is.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The &lt;code&gt;strings&lt;/code&gt; Command:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;strings&lt;/code&gt; is a command-line utility that extracts readable text (printable character sequences) from binary files. While tools like ExifTool are designed specifically for structured metadata, strings takes a brute-force approach - it scans through the entire file and pulls out anything that looks like human-readable text.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The ExifTool Command:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ExifTool is a comprehensive metadata extraction and manipulation tool. While &lt;code&gt;file&lt;/code&gt; gives you a quick preview and &lt;code&gt;strings&lt;/code&gt; dumps raw text, ExifTool is purpose-built for structured metadata analysis. It can read, write, and edit the metadata of virtually every file type.&lt;/p&gt;
+&lt;p&gt;To see available options for these tools:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ExifTool&lt;/strong&gt;: &lt;code&gt;exiftool -h&lt;/code&gt; (both Linux and Windows)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;file&lt;/strong&gt;: &lt;code&gt;file --help (Linux)&lt;/code&gt; or &lt;code&gt;man file&lt;/code&gt; for detailed documentation&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;strings&lt;/strong&gt;: &lt;code&gt;strings --help&lt;/code&gt; (Linux)&lt;/p&gt;
+&lt;p&gt;Running &lt;code&gt;file Meta.jpg&lt;/code&gt; produces the following output:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Meta.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), density 240x240, segment length 16, Exif Standard: [TIFF image data, little-endian, direntries=8, compression=JPEG (old), manufacturer=Apple, model=Apple iPhone 5, xresolution=132, yresolution=140, resolutionunit=2, GPS-Data], baseline, precision 8, 1024x768, components 3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;file&lt;/code&gt; command reveals file type, device information, image specifications. One key aspect of this output to note is the GPS-Data tag. This tag indicates that the image contains embedded geolocation coordinates. While the &lt;code&gt;file&lt;/code&gt; command confirms GPS data exists, it doesn&amp;rsquo;t display the actual latitude/longitude, timestamps, or other detailed EXIF fields.&lt;/p&gt;
+&lt;p&gt;Running &lt;code&gt;strings Meta.jpg&lt;/code&gt; produces a mix of readable text extracted from the binary image data. While this output can be carefully sifted through to find the desired information, it is best used with a text filtering and pattern matching tool like grep (Global Regular Expression Print). By utilizing the pipe symbol, &amp;ldquo;&lt;code&gt;|&lt;/code&gt;&amp;rdquo;, you can take the output from the &lt;code&gt;strings&lt;/code&gt; command and feed it into the &lt;code&gt;grep&lt;/code&gt; command.
+For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;strings Meta.jpg | grep -i &amp;quot;gps&amp;quot;&lt;/code&gt; - finds all lines mentioning GPS data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;code&gt;-i&lt;/code&gt; flag makes the search case-insensitive.&lt;/p&gt;
+&lt;p&gt;Running &lt;code&gt;exiftool Meta.jpg&lt;/code&gt; produces the following output:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ExifTool Version Number         : 12.76
+File Name                       : Meta.jpg
+Directory                       : .
+File Size                       : 565 kB
+File Modification Date/Time     : 2025:10:09 20:22:56-06:00
+File Access Date/Time           : 2025:10:09 20:23:08-06:00
+File Inode Change Date/Time     : 2025:10:09 20:22:56-06:00
+File Permissions                : -rw-r--r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+
+(...)
+
+Image Size                      : 1024x768
+Megapixels                      : 0.786
+Shutter Speed                   : 1/640
+Thumbnail Image                 : (Binary data 9828 bytes, use -b option to extract)
+GPS Latitude                    : 39 deg 52&amp;#39; 30.00&amp;#34; N
+GPS Longitude                   : 20 deg 0&amp;#39; 36.00&amp;#34; E
+GPS Position                    : 39 deg 52&amp;#39; 30.00&amp;#34; N, 20 deg 0&amp;#39; 36.00&amp;#34; E
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;questions&#34;&gt;Questions:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;When was the image created?&lt;/li&gt;
+&lt;li&gt;What are the dimensions of the image? (ex: 800x600)&lt;/li&gt;
+&lt;li&gt;What is the make of the camera that took the picture?&lt;/li&gt;
+&lt;li&gt;What is the model of the camera that took the picture?&lt;/li&gt;
+&lt;li&gt;What is the exposure time for the picture? (ex: 1/200)&lt;/li&gt;
+&lt;li&gt;What are the GPS coordinates where the was the picture taken?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h2&gt;
+&lt;p&gt;In this lab, students have learned how to extract and analyze metadata from image files using both online tools and command-line utilities. By exploring tools like file, strings, grep, and exiftool, you&amp;rsquo;ve seen how different approaches reveal varying levels of detail—from quick file identification to comprehensive EXIF data extraction. This lab also demonstrated to you that metadata often reveals far more than intended: a simple photo of a baby lamb contained the exact location where it was taken, the specific device used, and precise timestamps.&lt;/p&gt;
+&lt;h2 id=&#34;answers&#34;&gt;Answers&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;The answers to the question asked within this lab are contained within the &lt;a href=&#34;//localhost:1313/Home/extradocs/meta/Meta-Answers.md&#34;&gt;Meta Lab Answer File&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Passwords Intro</title>
       <link>//localhost:1313/labs/passwords-intro/</link>
