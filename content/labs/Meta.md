@@ -2,7 +2,7 @@
 title = "Meta"
 date = "2025-10-17T22:11:04-06:00"
 author = "Sahara Krompel"
-cover = "/Home/assets/doomtech_banner.svg"
+cover = "/Home/assets/doomtech_banner.png"
 coverCaption = ""
 categories = ["OSINT"]
 description = "This lab is adapted from the National Cyber League Gymnasium Open Source Intelligence easy challenge titled *Meta* The purpose of this lab is to teach students how to extract and analyze metadata from image files using both online tools and command-line utilities, while understanding the security and privacy implications of embedded metadata."
