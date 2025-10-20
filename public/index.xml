@@ -6,7 +6,70 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Oct 2025 22:11:04 -0600</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Oct 2025 11:58:21 -0600</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cryptography Introduction</title>
+      <link>//localhost:1313/challenges/crypto-easy/</link>
+      <pubDate>Mon, 20 Oct 2025 11:58:21 -0600</pubDate>
+      
+      <guid>//localhost:1313/challenges/crypto-easy/</guid>
+      <description>&lt;h2 id=&#34;purpose&#34;&gt;Purpose:&lt;/h2&gt;
+&lt;p&gt;This challenge has been created to introduce students to the world of cryptography. Students will primarily learn the basics of converting between different data types. As well as some entry level substition ciphers.&lt;/p&gt;
+&lt;h2 id=&#34;challenge&#34;&gt;Challenge:&lt;/h2&gt;
+&lt;p&gt;In this challenge there will be multiple ciphertexts that are using multiple different ciphers. Your job is to find which cipher is being used on the text, and decrpyt the cipher text.&lt;/p&gt;
+&lt;h3 id=&#34;question-1&#34;&gt;Question 1:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;IFdlbGNvbWVUb1RoZUNoYWxsZW5nZQ==
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-2&#34;&gt;Question 2:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;01010111 01100001 01101110 01100100 01100101 01110010 01101001 01101110 01100111 00100000 01110000 01110010 01100001 01101001 01110010 01101001 01100101 01110011 00100000 01101111 01100110 00100000 01101111 01101110 01100101 01110011 00100000 01100001 01101110 01100100 00100000 01111010 01100101 01110010 01101111 01110011
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-3&#34;&gt;Question 3:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;41 62 6f 75 74 20 74 6f 20 67 65 74 20 64 69 66 66 69 63 75 6c 74
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-4&#34;&gt;Question 4:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;ABABB ABABB ABABB AAAAB AAAAA AAABA ABBAB ABBAA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-5&#34;&gt;Question 5:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;yFDE 2 =:EE=6 EH:DE65
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-6&#34;&gt;Question 6:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Gsv pvb uli jfvhgrlm 7 rh &amp;quot;Dvyvi&amp;quot;!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-7&#34;&gt;Question 7:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;.--. .- .--. -.-.-- -.-.-- -.-.-- -.-.--
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;answers&#34;&gt;Answers:&lt;/h2&gt;
+&lt;p&gt;Check your answers to the above questions &lt;a href=&#34;//localhost:1313/Home/extradocs/cryptography/crypto-easy-answers/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+      <content>&lt;h2 id=&#34;purpose&#34;&gt;Purpose:&lt;/h2&gt;
+&lt;p&gt;This challenge has been created to introduce students to the world of cryptography. Students will primarily learn the basics of converting between different data types. As well as some entry level substition ciphers.&lt;/p&gt;
+&lt;h2 id=&#34;challenge&#34;&gt;Challenge:&lt;/h2&gt;
+&lt;p&gt;In this challenge there will be multiple ciphertexts that are using multiple different ciphers. Your job is to find which cipher is being used on the text, and decrpyt the cipher text.&lt;/p&gt;
+&lt;h3 id=&#34;question-1&#34;&gt;Question 1:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;IFdlbGNvbWVUb1RoZUNoYWxsZW5nZQ==
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-2&#34;&gt;Question 2:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;01010111 01100001 01101110 01100100 01100101 01110010 01101001 01101110 01100111 00100000 01110000 01110010 01100001 01101001 01110010 01101001 01100101 01110011 00100000 01101111 01100110 00100000 01101111 01101110 01100101 01110011 00100000 01100001 01101110 01100100 00100000 01111010 01100101 01110010 01101111 01110011
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-3&#34;&gt;Question 3:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;41 62 6f 75 74 20 74 6f 20 67 65 74 20 64 69 66 66 69 63 75 6c 74
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-4&#34;&gt;Question 4:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;ABABB ABABB ABABB AAAAB AAAAA AAABA ABBAB ABBAA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-5&#34;&gt;Question 5:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;yFDE 2 =:EE=6 EH:DE65
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-6&#34;&gt;Question 6:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Gsv pvb uli jfvhgrlm 7 rh &amp;quot;Dvyvi&amp;quot;!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;question-7&#34;&gt;Question 7:&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;.--. .- .--. -.-.-- -.-.-- -.-.-- -.-.--
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;answers&#34;&gt;Answers:&lt;/h2&gt;
+&lt;p&gt;Check your answers to the above questions &lt;a href=&#34;//localhost:1313/Home/extradocs/cryptography/crypto-easy-answers/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Meta</title>
       <link>//localhost:1313/labs/meta/</link>
@@ -89,7 +152,7 @@ GPS Position                    : 39 deg 52&amp;#39; 30.00&amp;#34; N, 20 deg 0&
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h2&gt;
 &lt;p&gt;In this lab, students have learned how to extract and analyze metadata from image files using both online tools and command-line utilities. By exploring tools like file, strings, grep, and exiftool, you&amp;rsquo;ve seen how different approaches reveal varying levels of detail—from quick file identification to comprehensive EXIF data extraction. This lab also demonstrated to you that metadata often reveals far more than intended: a simple photo of a baby lamb contained the exact location where it was taken, the specific device used, and precise timestamps.&lt;/p&gt;
 &lt;h2 id=&#34;answers&#34;&gt;Answers&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;The answers to the question asked within this lab are contained within the &lt;a href=&#34;//localhost:1313/Home/extradocs/meta/Meta-Answers.md&#34;&gt;Meta Lab Answer File&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The answers to the question asked within this lab are contained within the &lt;a href=&#34;//localhost:1313/Home/extradocs/meta/meta-answers/&#34;&gt;Meta Lab Answer File&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -301,17 +364,6 @@ c054f20568752c7be158d41e2c16b1c622cea9a1e1551fc48951a884ca184d94dd8b20b40a4c2543
     </item>
     
     <item>
-      <title>Placeholder Lab</title>
-      <link>//localhost:1313/labs/placeholderlab/</link>
-      <pubDate>Fri, 17 Oct 2025 17:59:36 -0600</pubDate>
-      
-      <guid>//localhost:1313/labs/placeholderlab/</guid>
-      <description>&lt;h1 id=&#34;placeholder-lab&#34;&gt;Placeholder Lab&lt;/h1&gt;</description>
-      <content>&lt;h1 id=&#34;placeholder-lab&#34;&gt;Placeholder Lab&lt;/h1&gt;
-</content>
-    </item>
-    
-    <item>
       <title>Example Announcement</title>
       <link>//localhost:1313/announcements/example-announcement/</link>
       <pubDate>Tue, 14 Oct 2025 21:15:53 -0600</pubDate>
@@ -328,16 +380,6 @@ c054f20568752c7be158d41e2c16b1c622cea9a1e1551fc48951a884ca184d94dd8b20b40a4c2543
       <pubDate>Tue, 14 Oct 2025 19:06:44 -0600</pubDate>
       
       <guid>//localhost:1313/showcase/placeholder/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Placeholder</title>
-      <link>//localhost:1313/challenges/placeholder/</link>
-      <pubDate>Tue, 14 Oct 2025 19:06:39 -0600</pubDate>
-      
-      <guid>//localhost:1313/challenges/placeholder/</guid>
       <description></description>
       <content></content>
     </item>
@@ -691,6 +733,57 @@ Destination Port: 8080
       <guid>//localhost:1313/club-info/club-information/</guid>
       <description>&lt;h1 id=&#34;weber-state-cyber-club&#34;&gt;Weber State Cyber Club&lt;/h1&gt;</description>
       <content>&lt;h1 id=&#34;weber-state-cyber-club&#34;&gt;Weber State Cyber Club&lt;/h1&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Cryptography Easy Answers</title>
+      <link>//localhost:1313/extradocs/cryptography/crypto-easy-answers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/extradocs/cryptography/crypto-easy-answers/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;WelcomeToTheChallenge
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Wandering prairies of ones and zeros
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;About to get difficult
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;MMMBACON
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 5:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Just a little twisted
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 6:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;The key for question 7 is &amp;quot;Weber&amp;quot;!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 7:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Two!!!!
+&lt;/code&gt;&lt;/pre&gt;</description>
+      <content>&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;WelcomeToTheChallenge
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Wandering prairies of ones and zeros
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;About to get difficult
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;MMMBACON
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 5:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Just a little twisted
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 6:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;The key for question 7 is &amp;quot;Weber&amp;quot;!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Question 7:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Two!!!!
+&lt;/code&gt;&lt;/pre&gt;
 </content>
     </item>
     

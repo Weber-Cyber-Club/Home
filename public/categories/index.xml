@@ -6,7 +6,27 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Oct 2025 22:11:04 -0600</lastBuildDate><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Oct 2025 11:58:21 -0600</lastBuildDate><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cryptography</title>
+      <link>//localhost:1313/categories/cryptography/</link>
+      <pubDate>Mon, 20 Oct 2025 11:58:21 -0600</pubDate>
+      
+      <guid>//localhost:1313/categories/cryptography/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Easy</title>
+      <link>//localhost:1313/categories/easy/</link>
+      <pubDate>Mon, 20 Oct 2025 11:58:21 -0600</pubDate>
+      
+      <guid>//localhost:1313/categories/easy/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>OSINT</title>
       <link>//localhost:1313/categories/osint/</link>

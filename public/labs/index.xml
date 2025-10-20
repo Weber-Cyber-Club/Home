@@ -89,7 +89,7 @@ GPS Position                    : 39 deg 52&amp;#39; 30.00&amp;#34; N, 20 deg 0&
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h2&gt;
 &lt;p&gt;In this lab, students have learned how to extract and analyze metadata from image files using both online tools and command-line utilities. By exploring tools like file, strings, grep, and exiftool, you&amp;rsquo;ve seen how different approaches reveal varying levels of detail—from quick file identification to comprehensive EXIF data extraction. This lab also demonstrated to you that metadata often reveals far more than intended: a simple photo of a baby lamb contained the exact location where it was taken, the specific device used, and precise timestamps.&lt;/p&gt;
 &lt;h2 id=&#34;answers&#34;&gt;Answers&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;The answers to the question asked within this lab are contained within the &lt;a href=&#34;//localhost:1313/Home/extradocs/meta/Meta-Answers.md&#34;&gt;Meta Lab Answer File&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The answers to the question asked within this lab are contained within the &lt;a href=&#34;//localhost:1313/Home/extradocs/meta/meta-answers/&#34;&gt;Meta Lab Answer File&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -297,17 +297,6 @@ c054f20568752c7be158d41e2c16b1c622cea9a1e1551fc48951a884ca184d94dd8b20b40a4c2543
 &lt;p&gt;In closing, I hope that you now feel more knowledgeable on password cracking techniques, but more importantly, I hope you have learned something about password security. You should now be able to see just how important not only password complexity&amp;rsquo;s, or length are. But also, how bad password reuse can be. This is a very brief overview of password attacks and they get much deeper than this. If you would like to try your hand at some other challenges, spanning different hash types, operating systems, and even tools, you should check out the &lt;a href=&#34;//localhost:1313/Home/categories/passwords/&#34;&gt;Weber State Cyber Club&amp;rsquo;s Passwords Section&lt;/a&gt;. There are also a multitude of resources out there on the mathematics behind hash functions, my personal choice for these things is oddly enough &lt;a href=&#34;https://www.wikipedia.org&#34;&gt;Wikipedia&lt;/a&gt; it is very helpful at giving you an overview of these topics. Thank you for participating in this lab. I hope you learned a lot and enjoyed the format!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Until Next Time!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;The Professor&lt;/strong&gt;&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Placeholder Lab</title>
-      <link>//localhost:1313/labs/placeholderlab/</link>
-      <pubDate>Fri, 17 Oct 2025 17:59:36 -0600</pubDate>
-      
-      <guid>//localhost:1313/labs/placeholderlab/</guid>
-      <description>&lt;h1 id=&#34;placeholder-lab&#34;&gt;Placeholder Lab&lt;/h1&gt;</description>
-      <content>&lt;h1 id=&#34;placeholder-lab&#34;&gt;Placeholder Lab&lt;/h1&gt;
 </content>
     </item>
     
