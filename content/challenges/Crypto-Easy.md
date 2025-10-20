@@ -2,7 +2,7 @@
 title = "Cryptography Introduction"
 date = "2025-10-20T11:58:21-06:00"
 author = "The Professor"
-cover = "/Home/assets/challenge_banner.svg"
+cover = "/Home/assets/ProfessorsBanner.png"
 coverCaption = ""
 categories = ["Cryptography", "Easy"]
 description = "This challenge has been created to introduce students to the world of cryptography. Students will primarily learn the basics of converting between different data types. As well as some entry level substition ciphers."
