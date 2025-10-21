@@ -1,0 +1,10 @@
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_state.json
+
+hugo.exe
+hugo.darwin
+hugo.linux
+
+/.hugo_build_lock
