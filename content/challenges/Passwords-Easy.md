@@ -61,4 +61,4 @@ Check your answers to the above questions [here](/Home/extradocs/passwords/passw
 
 ## Extra Help:
 
-If you would like some extra help, I have created a log on this topic that should give you extra guidance into hashing, along with techniques for breaking passwords. You can find this lab [here](/Home/labs/passwords-intro/).
+If you would like some extra help, I have created a lab on this topic that should give you extra guidance into hashing, along with techniques for breaking passwords. You can find this lab [here](/Home/labs/passwords-intro/).
