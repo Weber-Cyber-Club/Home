@@ -3,9 +3,6 @@ title = "Password Cracking Easy Answers"
 showFullContent = false
 hideComments = true
 +++
-
-# Answers - Passwords Easy Challenge
-
 **Question 1:**
 
 	19ca4ed4678ae31df94eb0ee6289671f:99redballoons
