@@ -11,7 +11,7 @@ readingTime = false
 hideComments = true
 +++
 
-## Purpose 
+## Purpose:
 
 This challenge has been created to give an introduction into hash types and cracking some passwords using a dictionary.
 
