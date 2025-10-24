@@ -11,11 +11,11 @@ readingTime = false
 hideComments = true
 +++
 
-## Purpose:
+## Purpose
 
 This challenge has been created to give an introduction into hash types and cracking some passwords using a dictionary.
 
-## Challenge: 
+## Challenge
 
 In this challenge students will be required to identify various hash types, and find a dictionary to successfully crack an assortment of hashes.
 
@@ -55,10 +55,10 @@ In this challenge students will be required to identify various hash types, and 
 
 	840006653e9ac9e95117a15c915caab81662918e925de9e004f774ff82d7079a40d4d27b1b372657c61d46d470304c88c788b3a4527ad074d1dccbee5dbaa99a
 
-## Answers: 
+## Answers
 
 Check your answers to the above questions [here](/Home/extradocs/passwords/passwords-easy-answers/).
 
-## Extra Help:
+## Extra Help
 
 If you would like some extra help, I have created a lab on this topic that should give you extra guidance into hashing, along with techniques for breaking passwords. You can find this lab [here](/Home/labs/passwords-intro/).
