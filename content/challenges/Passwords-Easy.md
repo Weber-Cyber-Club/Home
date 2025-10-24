@@ -5,7 +5,7 @@ author = "The Professor"
 cover = "/Home/assets/ProfessorsBanner.png"
 coverCaption = ""
 categories = ["Passwords"]
-description = "This challenge has been created to give an introduction in to hash types and breaking cracking some passwords using a dictionary."
+description = "This challenge has been created to give an introduction into hash types and  cracking some passwords using a dictionary."
 showFullContent = false
 readingTime = false
 hideComments = true
@@ -13,7 +13,7 @@ hideComments = true
 
 ## Purpose 
 
-This challenge has been created to give an introduction in to hash types and breaking cracking some passwords using a dictionary.
+This challenge has been created to give an introduction into hash types and cracking some passwords using a dictionary.
 
 ## Challenge: 
 
