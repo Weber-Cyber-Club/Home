@@ -11,10 +11,10 @@ readingTime = false
 hideComments = true
 +++
 
-## Purpose:
+## Purpose
 This challenge has been created to introduce students to the world of cryptography. Students will primarily learn the basics of converting between different data types. As well as some entry level substition ciphers.
 
-## Challenge:
+## Challenge
 
 In this challenge there will be multiple ciphertexts that are using multiple different ciphers. Your job is to find which cipher is being used on the text, and decrpyt the cipher text.
 
@@ -47,6 +47,6 @@ In this challenge there will be multiple ciphertexts that are using multiple dif
 	.--. .- .--. -.-.-- -.-.-- -.-.-- -.-.--
 
 
-## Answers:
+## Answers
 
 Check your answers to the above questions [here](/Home/extradocs/cryptography/crypto-easy-answers/).
