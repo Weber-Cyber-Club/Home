@@ -20,7 +20,7 @@ In our setup we will be creating a dedicated network within Docker that will con
 
 ## The Script:
 
-The script for the docker setup can be downloaded [here](/Home/assets/docker/docker_setup.sh). The contents of this script will be given below so students can have an idea of what is going on behind the scenes. This script will only work on debian systems, as these challenges are meant to be completed on Kali Linux. However, docker has really good resources for installation on other platforms [here](https://docs.docker.com/engine/install/).
+The script for the docker setup can be downloaded [here](/Home/assets/docker/docker_setup.sh). The contents of this script will be given below so students can have an idea of what is going on behind the scenes. This script will only work on debian systems, as these challenges are meant to be completed on Kali Linux. However, docker has really good resources for installation on other platforms [here](https://docs.docker.com/engine/install/). Keep in mind this script takes some time to run, so please be patient while it installs all the needed applications. You will need to run "chmod +x docker_setup.sh" in order to run the script, the script would be run as "sudo docker_setup.sh".
 
 ## Contents of the Script:
 ```
