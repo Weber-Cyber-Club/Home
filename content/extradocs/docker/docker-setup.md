@@ -29,29 +29,20 @@ The script for the docker setup can be downloaded [here](/Home/assets/docker/doc
 # Check if user is root
 if [ "$EUID" -ne 0 ]; then
 
-    echo "Script needs to be run as root, please run command using sudo or as the root user!\n"
+    echo "Script needs to be run as root, please run command using sudo or as the root user!"
     exit 1
     fi
 
 if ! command docker -v &> /dev/null;  then
 
-    echo "Docker does not exist on this system. Beginning install of Docker.\n\n"
+    echo "Docker does not exist on this system. Beginning install of Docker."
    
     #Update repositories
     apt update &> /dev/null
 
-    #Install repository dependencies
-    apt install -y ca-certificates curl gnupg &> /dev/null
-    install -m 0755 -d /etc/apt/keyrings &> /dev/null
-    curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |  tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-    #Update using new repository listings
-    apt update
-
     #Install all docker utilities
-    apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-    systemctl status docker
+    apt install -y docker.io &> /dev/null
+    systemctl enable docker --now
 
     # Add user to the docker group
     echo "Adding $SUDO_USER to the docker group"
@@ -74,7 +65,7 @@ else
     else
         echo "Docker network challenge_net already exists."
     fi
-
+fi
 echo "Please restart your machine then continue on to your challenge. Restarting will ensure your user is in the correct group, and all changes made to the machine are completed."
 ```
 
