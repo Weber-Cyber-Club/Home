@@ -1,3 +1,3 @@
 # Weber Cyber Club Website
 
-This repository will contain all of the files used within the Weber State Cyber Clubs Website.
+Currently only active while site is being moved to Weber-Cyber-Club.github.io Repository.
